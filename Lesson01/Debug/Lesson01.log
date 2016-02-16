@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\fritz lim\documents\visual studio 2015\projects\lesson01\lesson01\main.cpp(534): warning C4101: 'event': unreferenced local variable
+  Lesson01.vcxproj -> C:\Users\Fritz Lim\Documents\Visual Studio 2015\Projects\Lesson01\Debug\Lesson01.exe
+  Lesson01.vcxproj -> C:\Users\Fritz Lim\Documents\Visual Studio 2015\Projects\Lesson01\Debug\Lesson01.pdb (Partial PDB)

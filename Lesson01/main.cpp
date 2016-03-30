@@ -522,6 +522,7 @@ int main(int argc, char ** argv)
 #include "add.h"
 #include <SDL_mixer.h>
 #include <SDL_image.h>
+#include <sqlite3.h>
 
 //using namespace std;
 
@@ -529,6 +530,23 @@ int main(int argc, char ** argv)
 {
 	//Demo of splitting code into multiple .cpp and .h files
 	std::cout << "add 5 and 7: " << add(5, 7) << std::endl;
+
+	sqlite3 *db;
+	char *zErrMsg = 0;
+	int rc;
+
+	rc = sqlite3_open("test.db", &db);
+
+	if (rc) {
+		std::cout << "Can't open database: " << sqlite3_errmsg(db) << std::endl;
+	}
+	else {
+		std::cout << "Opened database successfully" << std::endl;
+	}
+	sqlite3_close(db);
+
+	std::cin.get();
+
 
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_Event event;
